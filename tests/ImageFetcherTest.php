@@ -42,4 +42,10 @@ class ImageFetcherTest extends TestCase
         $this->assertEquals('https://img.mobilelegends.com/group1/M00/00/05/rB_-LVo8fXaABiKvAABdFAMAFgI472.png', $result);
     }
 
+    public function test_it_returns_the_hero_profile_image_for_a_given_hero_id()
+    {
+        $result = $this->image->heroAvatar(1);
+        $this->assertEquals('https://img.mobilelegends.com/group1/M00/00/05/rB_-LVo8fXaABiKvAABdFAMAFgI472.png', $result);
+    }
+
 }

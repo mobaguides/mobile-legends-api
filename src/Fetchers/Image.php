@@ -8,6 +8,7 @@ use MobaGuides\MobileLegendsApi\Exceptions\ImageNotFoundException;
 class Image extends ApiFetcher
 {
 
+    const HERO_HEAD_PREFIX = 'HeroHead';
     const IMAGES_ENDPOINT = 'https://mapi.mobilelegends.com/api/icon';
 
     /**
@@ -34,6 +35,20 @@ class Image extends ApiFetcher
         }
 
         return $this->images[$key];
+    }
+
+    /**
+     * Returns the hero profile image for the given hero ID
+     *
+     * @param $id
+     * @return string
+     * @throws GuzzleException
+     * @throws ImageNotFoundException
+     */
+    public function heroAvatar($id): string
+    {
+        $heroId = self::HERO_HEAD_PREFIX . str_pad($id, 3, 0, STR_PAD_LEFT);
+        return $this->find($heroId . '.png');
     }
 
 }

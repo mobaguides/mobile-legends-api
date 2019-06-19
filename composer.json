@@ -1,5 +1,5 @@
 {
-    "name": "moba-guides.com/mobile-legends-api",
+    "name": "mobaguides/mobile-legends-api",
     "description": "An API Wrapper to fetch Mobile Legends Data",
     "require": {
         "php": ">=7.1.0",
