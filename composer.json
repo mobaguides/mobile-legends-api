@@ -1,0 +1,24 @@
+{
+    "name": "moba-guides.com/mobile-legends-api",
+    "description": "An API Wrapper to fetch Mobile Legends Data",
+    "require": {
+        "php": ">=7.1.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/support": "^5.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "MobaGuides\\MobileLegendsApi\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas",
+            "email": "thomas@growin.gg"
+        }
+    ]
+}
