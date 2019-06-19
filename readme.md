@@ -1,4 +1,4 @@
-#Mobile Legends API
+# Mobile Legends API
 
 This is an inofficial PHP API wrapper for the mobile game 
 "Mobile Legends". Currently it supports fetching Heroes, Hero Details 
