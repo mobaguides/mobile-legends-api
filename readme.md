@@ -15,7 +15,7 @@ be supported.
 
 ## Usage
 
-### 1. Factory
+### Factory
 
 Use the Factory to create `ApiFetcher` objects. 
 
@@ -26,7 +26,11 @@ use MobaGuides\MobileLegendsApi\Fetchers\Image;
 MobileLegends::make(Hero::class);
 ````
 
-### 2. Hero API Fetcher
+### Fetchers
+
+Fetchers are Classes that extend `MobaGuides\MobileLegendsApi\Fetchers\ApiFetcher`.
+You can also create your own Fetchers and instantiate them through the factory. Just let them 
+inherit from this class.
 
 #### Fetch All Heroes
 
@@ -48,9 +52,11 @@ $hero = MobileLegends::make(Hero::class);
 var_dump($hero->detail(1));
 ````
 
-### 3. Image Fetcher
-
 #### Find Image
+
+The Image map is fetched one time only and calls on the same
+Image Fetcher instance will only make one HHTP request. Subsequent
+method calls on the same instance will use the cached image map. 
 
 ````php
 use MobaGuides\MobileLegendsApi\MobileLegends;
@@ -60,12 +66,7 @@ $image = MobileLegends::make(Image::class);
 var_dump($image->find('HeroHead001.png'));
 ````
 
-### 4. FAQ
-
-#### 1. How can I get the Profile Image of an Hero?
-
-To get the Profile Image you can use the `heroAvatar()` method on the
-Image API Fetcher. 
+#### Find Hero Profile Image
 
 ````php
 use MobaGuides\MobileLegendsApi\MobileLegends;
@@ -75,21 +76,22 @@ $image = MobileLegends::make(Image::class);
 var_dump($image->heroAvatar(1)); // Hero Avatar of Miya
 ````
 
-#### 2. How do I know the keys for the Image Fetcher?
+## FAQ
+
+#### 1. How do I know the keys for the Image Fetcher?
 
 Mobile Legends maps weird keys to the actual image URLs. You can 
 get the map here: https://mapi.mobilelegends.com/api/icon
 
-#### 3. How can I fetch Equipment data?
+#### 2. How can I fetch Equipment data?
 
 Currently this is not supported as we could not find out the endpoint 
 for equip details.
 
-#### 4. What about Emblems, Map Data etc.?
+#### 3. What about Emblems, Map Data etc.?
 
 See above.
 
-#### 5. Okay, and User data?
+#### 4. Okay, and User data?
 
 We are currently working on this one and it should be released soon.
-
