@@ -6,8 +6,8 @@ and Images.
 
 ## Requirements
 
-This package requires >= PHP 7.1. Version below PHP 7.1 will never 
-be supported.
+This package requires >= PHP 7.2. PHP 7.1 is supported in older versions of the
+package.
 
 ## Installation
 
