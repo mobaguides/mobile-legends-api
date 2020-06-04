@@ -4,10 +4,10 @@
     "require": {
         "php": ">=7.2.0",
         "guzzlehttp/guzzle": "^6.3",
-        "illuminate/support": "^6.0"
+        "illuminate/support": "^7.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.2"
+        "phpunit/phpunit": "^8.5"
     },
     "autoload": {
         "psr-4": {
@@ -18,7 +18,7 @@
     "authors": [
         {
             "name": "Thomas",
-            "email": "thomas@growin.gg"
+            "email": "t.plat@growin.gg"
         }
     ]
 }
